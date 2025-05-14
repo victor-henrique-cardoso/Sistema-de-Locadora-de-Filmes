@@ -1,0 +1,14 @@
+C:\Users\victo\Documents\prova\NomeDoProjeto\bin\Debug\net9.0\NomeDoProjeto.exe
+C:\Users\victo\Documents\prova\NomeDoProjeto\bin\Debug\net9.0\NomeDoProjeto.deps.json
+C:\Users\victo\Documents\prova\NomeDoProjeto\bin\Debug\net9.0\NomeDoProjeto.runtimeconfig.json
+C:\Users\victo\Documents\prova\NomeDoProjeto\bin\Debug\net9.0\NomeDoProjeto.dll
+C:\Users\victo\Documents\prova\NomeDoProjeto\bin\Debug\net9.0\NomeDoProjeto.pdb
+C:\Users\victo\Documents\prova\NomeDoProjeto\obj\Debug\net9.0\NomeDoProjeto.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\victo\Documents\prova\NomeDoProjeto\obj\Debug\net9.0\NomeDoProjeto.AssemblyInfoInputs.cache
+C:\Users\victo\Documents\prova\NomeDoProjeto\obj\Debug\net9.0\NomeDoProjeto.AssemblyInfo.cs
+C:\Users\victo\Documents\prova\NomeDoProjeto\obj\Debug\net9.0\NomeDoProjeto.csproj.CoreCompileInputs.cache
+C:\Users\victo\Documents\prova\NomeDoProjeto\obj\Debug\net9.0\NomeDoProjeto.dll
+C:\Users\victo\Documents\prova\NomeDoProjeto\obj\Debug\net9.0\refint\NomeDoProjeto.dll
+C:\Users\victo\Documents\prova\NomeDoProjeto\obj\Debug\net9.0\NomeDoProjeto.pdb
+C:\Users\victo\Documents\prova\NomeDoProjeto\obj\Debug\net9.0\NomeDoProjeto.genruntimeconfig.cache
+C:\Users\victo\Documents\prova\NomeDoProjeto\obj\Debug\net9.0\ref\NomeDoProjeto.dll
