@@ -1,21 +1,33 @@
 public class Locacao
 {
-    public Cliente ClienteLocador { get; set; }
-    public Filme FilmeAlugado { get; set; }
-    public DateTime DataLocacao { get; set; }
-    public DateTime DataDevolucaoPrevista { get; set; }
-    public double ValorCobrado { get; set; }
+    private Cliente clienteLocador;
+    private Filme filmeAlugado;
+    private DateTime dataLocacao, dataDevolucaoPrevista;
+    private double valorCobrado;
 
-    // Construtor padrão
+    public Cliente GetClienteLocador() => clienteLocador;
+    public void SetClienteLocador(Cliente valor) => clienteLocador = valor;
+
+    public Filme GetFilmeAlugado() => filmeAlugado;
+    public void SetFilmeAlugado(Filme valor) => filmeAlugado = valor;
+
+    public DateTime GetDataLocacao() => dataLocacao;
+    public void SetDataLocacao(DateTime valor) => dataLocacao = valor;
+
+    public DateTime GetDataDevolucaoPrevista() => dataDevolucaoPrevista;
+    public void SetDataDevolucaoPrevista(DateTime valor) => dataDevolucaoPrevista = valor;
+
+    public double GetValorCobrado() => valorCobrado;
+    public void SetValorCobrado(double valor) => valorCobrado = valor;
+
     public Locacao() { }
 
-    // Construtor parametrizado
     public Locacao(Cliente clienteLocador, Filme filmeAlugado, DateTime dataLocacao, DateTime dataDevolucaoPrevista, double valorCobrado)
     {
-        ClienteLocador = clienteLocador;
-        FilmeAlugado = filmeAlugado;
-        DataLocacao = dataLocacao;
-        DataDevolucaoPrevista = dataDevolucaoPrevista;
-        ValorCobrado = valorCobrado;
+        this.clienteLocador = clienteLocador;
+        this.filmeAlugado = filmeAlugado;
+        this.dataLocacao = dataLocacao;
+        this.dataDevolucaoPrevista = dataDevolucaoPrevista;
+        this.valorCobrado = valorCobrado;
     }
 }

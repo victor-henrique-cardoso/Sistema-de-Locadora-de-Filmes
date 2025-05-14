@@ -1,21 +1,31 @@
 public class Filme
 {
-    public string Titulo { get; set; }
-    public string Genero { get; set; }
-    public int AnoLancamento { get; set; }
-    public string Diretor { get; set; }
-    public int DuracaoMinutos { get; set; }
+    private string titulo, genero, diretor;
+    private int anoLancamento, duracaoMinutos;
 
-    // Construtor padrão
+    public string GetTitulo() => titulo;
+    public void SetTitulo(string valor) => titulo = valor;
+
+    public string GetGenero() => genero;
+    public void SetGenero(string valor) => genero = valor;
+
+    public int GetAnoLancamento() => anoLancamento;
+    public void SetAnoLancamento(int valor) => anoLancamento = valor;
+
+    public string GetDiretor() => diretor;
+    public void SetDiretor(string valor) => diretor = valor;
+
+    public int GetDuracaoMinutos() => duracaoMinutos;
+    public void SetDuracaoMinutos(int valor) => duracaoMinutos = valor;
+
     public Filme() { }
 
-    // Construtor parametrizado
     public Filme(string titulo, string genero, int anoLancamento, string diretor, int duracaoMinutos)
     {
-        Titulo = titulo;
-        Genero = genero;
-        AnoLancamento = anoLancamento;
-        Diretor = diretor;
-        DuracaoMinutos = duracaoMinutos;
+        this.titulo = titulo;
+        this.genero = genero;
+        this.anoLancamento = anoLancamento;
+        this.diretor = diretor;
+        this.duracaoMinutos = duracaoMinutos;
     }
 }

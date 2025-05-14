@@ -4,7 +4,11 @@ class Program
 {
     static void Main(string[] args)
     {
-        Console.WriteLine("=== Cadastro de Endereço ===");
+        Console.Clear();
+        Console.WriteLine("=== CADASTRO DE LOCAÇÃO DE FILMES ===\n");
+
+        // Cadastro do Endereço
+        Console.WriteLine(">>> CADASTRO DE ENDEREÇO <<<");
         Console.Write("Logradouro: ");
         string logradouro = Console.ReadLine()!;
         Console.Write("Número: ");
@@ -18,7 +22,8 @@ class Program
 
         Endereco endereco = new Endereco(logradouro, numero, bairro, cidade, cep);
 
-        Console.WriteLine("\n=== Cadastro de Cliente ===");
+        // Cadastro do Cliente
+        Console.WriteLine("\n>>> CADASTRO DE CLIENTE <<<");
         Console.Write("Nome completo: ");
         string nome = Console.ReadLine()!;
         Console.Write("CPF: ");
@@ -30,7 +35,8 @@ class Program
 
         Cliente cliente = new Cliente(nome, cpf, nascimento, telefone, endereco);
 
-        Console.WriteLine("\n=== Cadastro de Filme ===");
+        // Cadastro do Filme
+        Console.WriteLine("\n>>> CADASTRO DE FILME <<<");
         Console.Write("Título: ");
         string titulo = Console.ReadLine()!;
         Console.Write("Gênero: ");
@@ -44,7 +50,8 @@ class Program
 
         Filme filme = new Filme(titulo, genero, ano, diretor, duracao);
 
-        Console.WriteLine("\n=== Cadastro da Locação ===");
+        // Cadastro da Locação
+        Console.WriteLine("\n>>> CADASTRO DA LOCAÇÃO <<<");
         DateTime dataLocacao = DateTime.Now;
         Console.Write("Data de devolução prevista (dd/mm/aaaa): ");
         DateTime dataDevolucao = DateTime.Parse(Console.ReadLine()!);
@@ -53,27 +60,35 @@ class Program
 
         Locacao locacao = new Locacao(cliente, filme, dataLocacao, dataDevolucao, valorCobrado);
 
-        // Exibindo os dados cadastrados
+        // Exibir os dados
         Console.Clear();
-        Console.WriteLine("=== DADOS DA LOCAÇÃO ===\n");
+        Console.WriteLine("=== DADOS CADASTRADOS ===\n");
 
-        Console.WriteLine("Cliente: " + cliente.NomeCompleto);
-        Console.WriteLine("CPF: " + cliente.CPF);
-        Console.WriteLine("Data de Nascimento: " + cliente.DataNascimento.ToString("dd/MM/yyyy"));
-        Console.WriteLine("Telefone: " + cliente.Telefone);
-        Console.WriteLine("Endereço: " + cliente.EnderecoResidencial.Logradouro + ", " + cliente.EnderecoResidencial.Numero + " - " + cliente.EnderecoResidencial.Bairro + " - " + cliente.EnderecoResidencial.Cidade + " - " + cliente.EnderecoResidencial.CEP);
+        Console.WriteLine(">>> CLIENTE");
+        Console.WriteLine("Nome: " + cliente.GetNomeCompleto());
+        Console.WriteLine("CPF: " + cliente.GetCPF());
+        Console.WriteLine("Nascimento: " + cliente.GetDataNascimento().ToString("dd/MM/yyyy"));
+        Console.WriteLine("Telefone: " + cliente.GetTelefone());
 
-        Console.WriteLine("\nFilme Alugado: " + filme.Titulo);
-        Console.WriteLine("Gênero: " + filme.Genero);
-        Console.WriteLine("Ano de Lançamento: " + filme.AnoLancamento);
-        Console.WriteLine("Diretor: " + filme.Diretor);
-        Console.WriteLine("Duração: " + filme.DuracaoMinutos + " minutos");
+        Console.WriteLine("\n>>> ENDEREÇO");
+        Console.WriteLine("Logradouro: " + endereco.GetLogradouro());
+        Console.WriteLine("Número: " + endereco.GetNumero());
+        Console.WriteLine("Bairro: " + endereco.GetBairro());
+        Console.WriteLine("Cidade: " + endereco.GetCidade());
+        Console.WriteLine("CEP: " + endereco.GetCEP());
 
-        Console.WriteLine("\nLocação:");
-        Console.WriteLine("Data de Locação: " + locacao.DataLocacao.ToString("dd/MM/yyyy"));
-        Console.WriteLine("Data de Devolução: " + locacao.DataDevolucaoPrevista.ToString("dd/MM/yyyy"));
-        Console.WriteLine("Valor Cobrado: R$" + locacao.ValorCobrado.ToString("F2"));
+        Console.WriteLine("\n>>> FILME");
+        Console.WriteLine("Título: " + filme.GetTitulo());
+        Console.WriteLine("Gênero: " + filme.GetGenero());
+        Console.WriteLine("Ano de Lançamento: " + filme.GetAnoLancamento());
+        Console.WriteLine("Diretor: " + filme.GetDiretor());
+        Console.WriteLine("Duração: " + filme.GetDuracaoMinutos() + " minutos");
 
-        Console.WriteLine("\n--- FIM ---");
+        Console.WriteLine("\n>>> LOCAÇÃO");
+        Console.WriteLine("Data da Locação: " + locacao.GetDataLocacao().ToString("dd/MM/yyyy"));
+        Console.WriteLine("Data de Devolução: " + locacao.GetDataDevolucaoPrevista().ToString("dd/MM/yyyy"));
+        Console.WriteLine("Valor Cobrado: R$" + locacao.GetValorCobrado().ToString("F2"));
+
+        Console.WriteLine("\n=== FIM DO CADASTRO ===");
     }
 }
